@@ -1,0 +1,4 @@
+<div class="message <%= message.user == current_user ? 'sent' : 'received' %>">
+  <p><%= message.body %></p>
+  <small><%= message.user.email %> at <%= message.created_at %></small>
+</div>

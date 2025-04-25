@@ -1,0 +1,8 @@
+<h1>Notifications</h1>
+
+<% @notifications.each do |notification| %>
+  <div class="notification">
+    <%= notification.to_notification.message %>
+    <%= link_to 'View', notification.to_notification.url %>
+  </div>
+<% end %>

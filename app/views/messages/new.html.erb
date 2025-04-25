@@ -1,0 +1,8 @@
+<%= turbo_frame_tag "new_message" do %>
+  <%= form_with model: [@conversation, @message], 
+               data: { controller: "reset-form", action: "turbo:submit-end->reset-form#reset" } do |f| %>
+
+    <%= f.submit "Send", class: "btn-primary" %>
+  <% end %>
+<% end %>
+

@@ -1,0 +1,13 @@
+<h1>Conversation with <%= @conversation.recipient.email %></h1>
+
+<div id="messages">
+  <% @messages.each do |message| %>
+    <%= render 'messages/message', message: message %>
+  <% end %>
+</div>
+
+<div id="new_message">
+  <%= render "messages/form", conversation: @conversation, message: Message.new %>
+</div>
+
+<%= turbo_frame_tag "new_message", src: new_conversation_message_path(@conversation) %>
