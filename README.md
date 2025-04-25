@@ -1,24 +1,15 @@
-# README
+# Messaging Application 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+I’m using Rails version 8.0, the Noticed gem version 2.6, and MySQL.
 
-Things you may want to cover:
+* It’s a simple application where users who are signed in can search for other users they want to message and communicate with them through text messages.
 
-* Ruby version
+* I also added a notification feature so that when a user sends a message, the recipient gets a notification. However, this caused an error due to changes in the latest version of the Noticed gem.
 
-* System dependencies
+* I tried creating a notifier using the command:
+  
+* rails g noticed:notifier MessageNotification ---> This command successfully created the notifier, but when I ran
 
-* Configuration
+* rails db:migrate  ---> no tables were added to the database.
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* I’m not sure where I made a mistake. Could you please help me resolve this issue?
